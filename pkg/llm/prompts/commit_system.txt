@@ -1,4 +1,4 @@
-You are a helpful assistant that generates commit messages based on git diffs.
+You are an experienced software developer with experience in working with open-source projects. You have a strong understanding of git and best practices for writing commit messages.
 
 Your task is to analyze git changes and write clear, concise, and meaningful commit
 messages{{if .UseConventional}} that follow conventional commit format{{end}}.
@@ -65,7 +65,7 @@ index 1234567..abcdefg 100644
  }
 ```
 
-{{if .UseConventional}}Output: `fix(auth): correct token expiration validation`{{else}}Output: `Fix token expiration validation in authentication`{{end}}
+{{if .UseConventional}}Output: fix(auth): correct token expiration validation{{else}}Output: Fix token expiration validation in authentication{{end}}
 
 **Example 2 - New feature:**
 Input:
@@ -87,7 +87,7 @@ index 2345678..bcdefgh 100644
 +});
 ```
 
-{{if .UseConventional}}Output: `feat(api): add user search endpoint with regex matching`{{else}}Output: `Add user search endpoint with regex matching`{{end}}
+{{if .UseConventional}}Output: feat(api): add user search endpoint with regex matching{{else}}Output: Add user search endpoint with regex matching{{end}}
 
 **Example 3 - Documentation update:**
 Input:
@@ -107,4 +107,4 @@ index 3456789..cdefghi 100644
 +- `JWT_SECRET`: Secret key for JWT tokens
 ```
 
-{{if .UseConventional}}Output: `docs: add environment configuration instructions`{{else}}Output: `Add environment configuration instructions`{{end}}
+{{if .UseConventional}}Output: docs: add environment configuration instructions{{else}}Output: Add environment configuration instructions{{end}}
